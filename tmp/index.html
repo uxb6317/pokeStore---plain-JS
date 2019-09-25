@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab" rel="stylesheet">
+    <!--[htmlclean-protect]-->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- endinject -->
+    <!--[/htmlclean-protect]-->
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="" class="menu-item home">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a class="logo" href=""><img src="/images/logo.png" alt=""></a>
+                <a href="" class="menu-item cart">
+                    <i class="fas fa-shopping-cart"></i> Cart (0)
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- shows a detailed version of an item -->
+    <div class="item-detailed featured">
+        <div class="item-image">
+            <p class="item-desc"></p>
+        </div>
+        <div class="item-full-details">
+            <h2 class="header">Item of the Day</h2>
+            <h3 class="item-name"></h3>
+            <div class="types-height-weight">
+                <div class="item-types-habitat">
+                    <div class="item-types"></div>
+                    <div class="habitat-container">Lives in: <p class="habitat">Grasslands</p>
+                    </div>
+                </div>
+                <div class="height-weight">
+
+                </div>
+            </div>
+            <div class="sample-moves">
+                <span style="background:#ff3b3f; padding: .2rem; color: white;">Moves:</span> Cut, Fly, Thunderbolt,
+                Fart, Stab ... <span class="more-moves">and 82 more</span>
+            </div>
+            <ul class="item-stats">
+                <div class="stat">
+                    <div class="stat-container">
+                        <p class="stat-name">Speed: </p><span class="stat-number stat-speed"></span>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-name">Special Attack: </p><span class="stat-number stat-specialAttack"></span>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-name">Special Defense: </p><span class="stat-number stat-specialDefense"></span>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-name">Attack: </p><span class="stat-number stat-attack"></span>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-name">Defense: </p><span class="stat-number stat-defense"></span>
+                    </div>
+                    <div class="stat-container">
+                        <p class="stat-name">HP: </p><span class="stat-number stat-hp"></span>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- list of all our items in the store -->
+    <div id="catalog">
+        <h1 class="header">Our Catalog</h1>
+        <div id="catalog-container">
+            <div id="filters">
+                <div id="filter-prices">
+                    <h4 class="header">Price</h4>
+                    <p class="slider-label">Minimum</p>
+                    <div class="slider" id="min-price">
+                        <span>$50</span>
+                        <input type="range" min="1" max="500" value="50">
+                    </div>
+                    <p class="slider-label">Maximum</p>
+                    <div class="slider" id="max-price">
+                        <span>$250</span>
+                        <input type="range" min="1" max="500" value="250">
+                    </div>
+                </div>
+                <a class="filter-button button button-disabled" href="">Filter</a>
+            </div>
+            <div id="catalog-items">
+                <div id="sorts">
+                    <div id="filter-types">
+
+                    </div>
+                    <div id="sort-options">
+                        <select name="sort-select" id="sort-select">
+                            <option value="bestSelling">Best Selling</option>
+                            <option value="priceDown">Price &darr;</option>
+                            <option value="priceUp">Price &uarr;</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="items-container">
+                </div>
+                <div id="pagination">
+                    <i class="fas fa-caret-left pagination-link pagination-arrow pagination-previous"></i>
+                    <i class="fas fa-caret-right pagination-link pagination-arrow pagination-next"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hidden by default, opens when one of the items in the 
+        catalogue is clicked for more information.  -->
+    <div class="modal">
+        <div class="item-detailed modalItem">
+            <h3 class="item-name">
+                <div class="name">
+
+                </div>
+                <span class="modal-close"><i class="fas fa-window-close"></i></span>
+            </h3>
+            <div class="item-image">
+                <p class="item-desc"></p>
+            </div>
+            <div class="item-full-details">
+                <div class="types-height-weight">
+                    <div class="item-types-habitat">
+                        <div class="item-types"></div>
+                        <p class="habitat">Grasslands</p>
+                    </div>
+                    <div class="height-weight">
+
+                    </div>
+                </div>
+                <div class="sample-moves">
+                    <span style="background:#ff3b3f; padding: .2rem; color: white;">Moves:</span> Cut, Fly,
+                    Thunderbolt,
+                    Fart, Stab ... <span class="more-moves">and 82 more</span>
+                </div>
+                <ul class="item-stats">
+                    <div class="stat">
+                        <div class="stat-container">
+                            <p class="stat-name">Speed: </p><span class="stat-number stat-speed"></span>
+                        </div>
+                        <div class="stat-container">
+                            <p class="stat-name">Special Attack: </p><span class="stat-number stat-specialAttack"></span>
+                        </div>
+                        <div class="stat-container">
+                            <p class="stat-name">Special Defense: </p><span class="stat-number stat-specialDefense"></span>
+                        </div>
+                        <div class="stat-container">
+                            <p class="stat-name">Attack: </p><span class="stat-number stat-attack"></span>
+                        </div>
+                        <div class="stat-container">
+                            <p class="stat-name">Defense: </p><span class="stat-number stat-defense"></span>
+                        </div>
+                        <div class="stat-container">
+                            <p class="stat-name">HP: </p><span class="stat-number stat-hp"></span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="toast">
+        Sorry, that doesn't work yet :(
+    </div>
+    <div id="moves">
+        <div class="moves-container">
+            <div class="header">Moves
+                <span class="modal-close"><i class="fas fa-window-close"></i></span>
+            </div>
+            <div class="moves-list">
+                <table>
+                    <tr>
+                        <td>Fart</td>
+                        <td>Punch</td>
+                        <td>Kick</td>
+                        <td>Lick</td>
+                        <td>Jump</td>
+                    </tr>
+                    <tr>
+                        <td>Kick</td>
+                        <td>Long Move</td>
+                        <td>Kick</td>
+                        <td>Run</td>
+                        <td>Jump</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--[htmlclean-protect]-->
+    <!-- inject:js -->
+    <script src="data.js"></script>
+    <script src="data_types.js"></script>
+    <script src="helpers.js"></script>
+    <script src="script.js"></script>
+    <!-- endinject -->
+    <!--[/htmlclean-protect]-->
+</body>
+
+</html>
